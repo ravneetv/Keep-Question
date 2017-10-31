@@ -15,7 +15,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             
                             <div class="col-md-12">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -28,7 +28,7 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             
                             <div class="col-md-12">
-                                <input id="password" type="password" class="form-control" name="password">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -64,9 +64,8 @@
 
                         <span class="hr"><h5>or</h5></span>
 						<div class="social-btn">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Login With Facebook</a>
+							<a href="{{ url('auth/fb') }}"><i class="fa fa-facebook" aria-hidden="true"></i>Login With Facebook</a>
 							<a class="google" href="{{ url('auth/google') }}"><i class="fa fa-google" aria-hidden="true"></i>Login With Google</a>
-                            <a href="redirect/google">G+</a>
 						</div>
 
 

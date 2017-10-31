@@ -17,6 +17,8 @@ Route::get('/', function () {
 Route::get('/email', function () {
     return view('email');
 });
+Route::get('auth/fb', 'Auth\fbController@redirectToProvider');
+Route::get('auth/fb/callback', 'Auth\fbController@handleProviderCallback');
 
 Route::get('auth/google', 'Auth\googleController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\googleController@handleProviderCallback');

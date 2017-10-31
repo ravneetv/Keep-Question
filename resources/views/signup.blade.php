@@ -29,7 +29,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
                             <div class="col-md-12">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email or username" required="true">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" required="true">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -73,12 +73,12 @@
                             </div>
                         </div>
 
-
+<!--
                         <span class="hr"><h5>or</h5></span>
 						<div class="social-btn">
 							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Login With Facebook</a>
 							<a class="google" href="#"><i class="fa fa-google" aria-hidden="true"></i>Login With Google</a>
-						</div>
+						</div>-->
                         <!--<div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
@@ -88,7 +88,7 @@
                         </div>-->
                     </form>
 
-                    <p class="sgin">Already have a member? <span><a href="{{ URL :: asset('/login') }} ">Login</a></span></p>
+                    <p class="sgin">Already a member? <span><a href="{{ URL :: asset('/login') }} ">Login</a></span></p>
 
 			<!--<form name="login_form" id="login_form" method="post" action="">
 				<input type="text" name="text" placeholder="Username" required="">

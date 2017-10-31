@@ -5,7 +5,7 @@ use Socialite;
 use Auth;
 use App\User;
 
-class googleController extends AuthController
+class fbController extends AuthController
 {
     /**
      * Redirect the user to the GitHub authentication page.
@@ -14,7 +14,7 @@ class googleController extends AuthController
      */
     public function redirectToProvider()
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
 
     /**
@@ -25,14 +25,12 @@ class googleController extends AuthController
     public function handleProviderCallback()
     {
 
-        $user = Socialite::driver('google')->user();
+        $user = Socialite::driver('facebook')->user();
 
         $data = [
-            //'google_id' => $user->getId(),
             'email' => $user->getEmail(),
             'name'  => $user->getName(),
-            //'avatar'=> $user->getAvatar(),
-            'password'=> 'Google'
+            'password'=> 'facebook'
 
 
         ];
